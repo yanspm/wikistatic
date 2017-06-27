@@ -1,0 +1,52 @@
+# visit https://github.com/mojombo/jekyll/wiki/Configuration for more settings
+
+paginate: 8 # pagination based on number of posts
+paginate_path: "page:num"
+exclude: ["README.md"] # files to exclude
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+# disqus: wiki
+# google_analytics: wiki
+title: wiki
+
+defaults:
+  -
+    scope:
+      path: "" # empty string for all files
+    values:
+      title: wiki
+
+description: Wiki Statique Jekyll
+author:
+  name: wiki
+  email: static@wiki.xyz
+  bio: wiki statique!
+  email_md5: 726351295ec82e145928582f595aa3aa
+
+rss_path: feed.xml
+categories_path: categories.html
+tags_path: tags.html
+cherche_path : search.html
+lastposts_path : lastposts.html
+
+sidebar_avatar: notepad-with-pencil-32x32.png
+sidebar_logo: notepad-with-pencil-128x128.png
+sidebar_rss: feed.png
+favicon_ico: notepad-with-pencil-32x32.png
+
+collections:
+  posts:
+    output: true
+    permalink: /:categories/:year/:month/:date/:title/
+
+
+BASE_PATH:
+
+gems:
+  - jekyll-paginate
+  - jekyll-srcset
+  - jekyll-toc
+
